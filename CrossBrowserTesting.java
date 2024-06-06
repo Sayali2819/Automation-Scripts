@@ -1,22 +1,19 @@
-package datadriven;
-
 import java.util.Scanner;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CrossBrowserTesting {
-
-	public static void main(String[] args) {
+public class CrossBrowserTesting
+{
+	public static void main(String[] args)
+	{
 		String browser; 
 		WebDriver driver;
 		String username = "standard_user";
-	    String password = "secret_sauce";
+	        String password = "secret_sauce";
 	    
 		System.out.println("Enter the browser name : 1.Chrome  2.FireFox   3.Edge");
 		Scanner sc = new Scanner(System.in);
@@ -45,7 +42,4 @@ public class CrossBrowserTesting {
 		driver.findElement(By.id("login-button")).click();
 		driver.close();
 	}
-	
-	
-
 }
