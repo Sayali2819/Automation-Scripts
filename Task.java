@@ -1,6 +1,5 @@
-package datadriven;
-
 //Data Driven Testing
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,9 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Task {
-
-	public static void main(String[] args) throws IOException, InterruptedException {
+public class Task
+{
+	public static void main(String[] args) throws IOException, InterruptedException 
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -28,11 +28,9 @@ public class Task {
 		XSSFSheet excelSheet = excelWBook.getSheet("TestData");
 		
 		int totalRows = excelSheet.getLastRowNum()+1;
-		
 		String username;
 		String pwd;
-		
-		
+			
 		for(int r=1; r<totalRows; r++)
 		{
 			username = excelSheet.getRow(r).getCell(0).toString();
@@ -59,8 +57,6 @@ public class Task {
 		else
 		{
 			System.out.println("Login Failed!");
-		}
-		
+		}		
 	}
-
 }
