@@ -1,17 +1,14 @@
 [
 {
     "username" : "Admin",
-    "password" : "admin123",
-    "expected" : "Dashboard"
+    "password" : "admin123"
 },
 {
     "username" : "Abcu",
-    "password" : "admin123",
-    "expected" : "Invalid credentials"
+    "password" : "admin123"
 },
 {
     "username" : "Admin",
-    "password" : "12368",
-    "expected" : "Invalid credentials"
+    "password" : "12368"
 }
 ]
