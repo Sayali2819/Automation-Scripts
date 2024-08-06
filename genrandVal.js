@@ -1,9 +1,8 @@
-// cypress/support/utils.js
 
 // Function to generate a random alphanumeric string of a specified length
 export const generateRandomString = (length) => {
     let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
     const charactersLength = characters.length;
     for (let i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -32,3 +31,18 @@ export const generateRandomDigitString = (length) => {
     }
     return result;
 };
+
+
+export const generateRandomEmail = () => {
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let emailPrefix = '';
+    for (let i = 0; i < 10; i++) {
+      emailPrefix += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    const domain = 'example.com'; // You can change this to any domain you prefer
+    return `${emailPrefix}@${domain}`;
+  }
+  
+ 
+  
